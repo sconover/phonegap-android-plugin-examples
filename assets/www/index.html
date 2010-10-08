@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Hello World Plugin</title>
+</head>
+<body>
+
+<button id="call-hello-world">Call native code!</button>
+<script type="text/javascript" charset="utf-8" src="helloworld.js"></script>	  
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>	   
+<script type="text/javascript" charset="utf-8">	
+document.addEventListener('deviceready', function() {
+	console.log('device ready call')
+	
+	var btn = document.getElementById('call-hello-world');
+	btn.onclick = function() {
+		hello(alert);
+	}
+	
+}, true);		
+</script>
+</body>
+</html>
