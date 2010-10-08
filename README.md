@@ -1,4 +1,9 @@
-Getting started
+Eclipse Getting Started
+===
+
+All you need to do is ensure that `./libs/phonegap.jar`. Simply right click on `./libs` and select Build Path > Configure Build Path. Choose Java Build Path and select the Libraries tab. Click add Jars and select `phonegap.jar`. If you are building an Android project from the command line jar files found in libs are automatically compiled in. 
+
+Terminal Getting Started
 ===
 
 You will need to create a local.properties file with a path to your Android SDK install. Something like this:
@@ -9,7 +14,7 @@ Running `android update project -p .` will generate this file for you. From here
 
 	ant debug install && adb logcat
 	
-This should build HelloWorldPlugin to your emulator or device. Sweet!
+This should build HelloWorldPlugin to your emulator or device. Sweet! Now, lets check out the code. 
 
 Implementing your first Plugin
 ---
@@ -31,6 +36,8 @@ In this example `src/com/phonegap/HelloWorldPlugin/HelloWorldPlugin.java` is jus
 			}
 		}
 	}
+	
+	<script src="http://gist.github.com/617582.js?file=HelloWorld.java"></script>
 
 A plugin need only extend `Plugin` and implement an `execute`	method which, intuitively, returns a `PluginResult`. This form of the `execute` method signature requires an `action` which is a simple string to alias a JavaScript method, an array of arguments and a string identifier of the JavaScript method to execute upon completion. 
 
