@@ -10,7 +10,6 @@ public class HelloWorldPlugin extends DroidGap
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-		this.addService("HelloWorld", "com.phonegap.HelloWorldPlugin.HelloWorld");
         super.loadUrl("file:///android_asset/www/index.html");
     }
 }

@@ -14,7 +14,10 @@ document.addEventListener('deviceready', function() {
 	
 	var btn = document.getElementById('call-hello-world');
 	btn.onclick = function() {
-		hello(alert);
+		hello(
+			function(r){alert(r)},
+			function(e){alert(e)}
+		);
 	}
 	
 }, true);		
