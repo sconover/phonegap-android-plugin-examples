@@ -1,4 +1,5 @@
 var hello = function(win, fail) {
-	PluginManager.addService("HelloWorld","com.phonegap.HelloWorldPlugin.HelloWorld");
+	if (window['HelloWorld'] == undefined)
+		PluginManager.addService("HelloWorld","com.phonegap.HelloWorldPlugin.HelloWorld");
 	PhoneGap.execAsync(win, fail, "HelloWorld", "sayHello", []);
 };
